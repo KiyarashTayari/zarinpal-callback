@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      window.onload = function () {
+        const query = new URLSearchParams(window.location.search);
+        const authority = query.get("Authority");
+        const status = query.get("Status");
+
+        // بازگشت به اپلیکیشن موبایل با scheme اختصاصی
+        window.location.href = `yourapp://payment_callback?Authority=${authority}&Status=${status}`;
+      };
+    </script>
+  </head>
+  <body>
+    <p>در حال بازگشت به برنامه...</p>
+  </body>
+</html>
