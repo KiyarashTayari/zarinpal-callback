@@ -9,13 +9,11 @@
         const authority = query.get("Authority");
         const status = query.get("Status");
 
-        // بازگشت به اپلیکیشن موبایل با scheme اختصاصی
         window.location.href = `atroweb://payment_callback?Authority=${authority}&Status=${status}`;
       };
     </script>
   </head>
   <body>
     <p>در حال بازگشت به برنامه...</p>
-    <a href="https://www.atro-web.ir/callback.html">Click Me</a>
   </body>
 </html>
